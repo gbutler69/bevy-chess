@@ -19,8 +19,8 @@ fn main() {
         .add_plugins(DefaultPlugins)
         .add_plugin(PickingPlugin)
         .add_plugin(DebugPickingPlugin)
+        .add_plugin(board::BoardPlugin)
         .add_startup_system(environment::setup.system())
-        .add_startup_system(board::create.system())
         .add_startup_system(pieces::create.system())
         .run();
 }
